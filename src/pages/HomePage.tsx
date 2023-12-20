@@ -176,7 +176,7 @@ const HomePage: FC = () => {
         </Link>
       </Box>
 
-      <Box py={16} bgColor='blue.400'>
+      <Box py={16} px={6} bgColor='blue.400'>
         <Flex
           flexDir={{ base: 'column', md: 'row' }}
           alignItems='center'
@@ -205,16 +205,17 @@ const HomePage: FC = () => {
             <Image
               src={BallerBearsWebsite}
               mx={{ base: 'auto', md: 0 }}
-              ml={{ base: 0, md: 'auto' }}
-              roundedLeft='md'
+              mr={{ base: 'auto', md: 'auto' }}
+              roundedLeft={'md'}
+              roundedRight={{ base: 'md', md: 'none' }}
               shadow='lg'
-              width='90%'
+              width='100%'
             />
           </Link>
         </Flex>
       </Box>
 
-      <Box py={16} bgColor='blue.50'>
+      <Box py={16} px={6} bgColor='blue.50'>
         <Flex
           flexDir={{ base: 'column', md: 'row' }}
           alignItems='center'
@@ -230,10 +231,11 @@ const HomePage: FC = () => {
             <Image
               src={SnippetManager}
               mx={{ base: 'auto', md: 0 }}
-              mr={{ base: 0, md: 'auto' }}
-              roundedRight='md'
+              mr={{ base: 'auto', md: 'auto' }}
+              roundedRight={'md'}
+              roundedLeft={{ base: 'md', md: 'none' }}
               shadow='lg'
-              width={{ base: '90%', md: '100%' }}
+              width='100%'
             />
           </Link>
           <Stack flex={1} gap={6} color='blue.700' order={{ base: 1, md: 2 }}>
@@ -266,6 +268,7 @@ const HomePage: FC = () => {
 
       <Box py={16} bgColor='green.400'>
         <Flex
+          flexDir={{ base: 'column', md: 'row' }}
           alignItems='center'
           justifyContent='space-between'
           gap={16}
@@ -280,7 +283,13 @@ const HomePage: FC = () => {
               cool open-source projects
             </Text>
           </Stack>
-          <Flex alignItems='center' justifyContent='flex-end' gap={6} h='100%'>
+          <Flex
+            flexWrap='wrap'
+            alignItems='center'
+            justifyContent={{ base: 'center', md: 'flex-end' }}
+            gap={6}
+            h='100%'
+          >
             {openSourceProjects.map((project) => (
               <ProjectCard
                 key={project.title}

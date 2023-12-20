@@ -9,8 +9,10 @@ const Footer: FC = () => {
     <Box as='footer' w='100%' p={6} bgColor='gray.500'>
       <Flex
         maxW='4xl'
+        flexDir={{ base: 'column', md: 'row' }}
         alignItems='center'
         justifyContent='space-between'
+        gap={4}
         mx='auto'
       >
         <Link to={pagePaths.home}>
