@@ -1,7 +1,6 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex, Link, Text } from '@chakra-ui/react'
 import { FC } from 'react'
 import IconRow from '@components/information/IconRow'
-import { Link } from 'react-router-dom'
 import { pagePaths } from '@utils/consts'
 
 const Footer: FC = () => {
@@ -15,7 +14,7 @@ const Footer: FC = () => {
         gap={4}
         mx='auto'
       >
-        <Link to={pagePaths.home}>
+        <Link href={pagePaths.home} _hover={{ underline: 'none' }}>
           <Text fontSize='3xl' fontWeight='bold' color='gray.300'>
             reece hunter
           </Text>

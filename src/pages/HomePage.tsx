@@ -2,7 +2,7 @@ import { Image } from '@chakra-ui/image'
 import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/layout'
 import { Button, Icon, Link } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import ValetFlowLogo from '@assets/valet_flow_logo.png'
 import ValetFlowWebsite from '@assets/valet_flow.png'
 import { projectLinks } from '@utils/consts'
@@ -87,8 +87,6 @@ const HomePage: FC = () => {
       },
     },
   ]
-
-  useEffect(() => window.scrollTo(0, 0), [])
 
   return (
     <>
