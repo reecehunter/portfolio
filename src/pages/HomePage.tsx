@@ -24,7 +24,6 @@ import BallerBearsWebsite from '@assets/baller_bears_website.png'
 import SnippetManager from '@assets/snippet_manager.png'
 import ContactForm from '@components/input/ContactForm'
 import Hero from '@assets/hero.jpeg'
-import IconRow from '@components/information/IconRow'
 
 const HomePage: FC = () => {
   const openSourceProjects: Project[] = [
