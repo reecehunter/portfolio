@@ -176,7 +176,7 @@ const HomePage: FC = () => {
         </Link>
       </Box>
 
-      <Box py={16} px={6} bgColor='blue.400'>
+      <Box py={16} px={{ base: 6, md: 0 }} bgColor='blue.400'>
         <Flex
           flexDir={{ base: 'column', md: 'row' }}
           alignItems='center'
@@ -215,7 +215,7 @@ const HomePage: FC = () => {
         </Flex>
       </Box>
 
-      <Box py={16} px={6} bgColor='blue.50'>
+      <Box py={16} px={{ base: 6, md: 0 }} bgColor='blue.50'>
         <Flex
           flexDir={{ base: 'column', md: 'row' }}
           alignItems='center'
