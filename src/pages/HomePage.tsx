@@ -14,6 +14,7 @@ import { Code, CodeBracketsSquare, EthereumCircle, Mail, ViewGrid } from 'iconoi
 import CloudIcon from '@components/icons/Cloud'
 import StripeLogo from '@assets/stripe_logo.png'
 import SignstrLogo from '@assets/signstr_logo.png'
+import CloudClient from '@assets/cloudclient.png'
 import BallerBearsWebsite from '@assets/baller_bears_website.png'
 import SnippetManager from '@assets/snippet_manager.png'
 import ContactForm from '@components/input/ContactForm'
@@ -151,9 +152,41 @@ const HomePage: FC = () => {
 
       <Box py={16} px={{ base: 6, md: 0 }} bgColor='blue.400'>
         <Flex flexDir={{ base: 'column', md: 'row' }} alignItems='center' gap={6}>
+          <Link
+            flex={1}
+            href={projectLinks.cloud_client}
+            target='_blank'
+            rel='noreferrer'
+            order={{ base: 2, md: 1 }}
+          >
+            <Image
+              src={CloudClient}
+              mx={{ base: 'auto', md: 0 }}
+              mr={{ base: 'auto', md: 'auto' }}
+              roundedRight={'md'}
+              roundedLeft={{ base: 'md', md: 'none' }}
+              shadow='lg'
+              width='100%'
+            />
+          </Link>
+          <Stack flex={1} gap={6} color='blue.700' order={{ base: 1, md: 2 }}>
+            <Icon as={CloudIcon} w='100%' h='50px' mx='auto' fill='gray.100' strokeWidth={2} />
+            <Text fontSize='3xl' textAlign='center' color='gray.100'>
+              I built CloudClient.
+              <br />
+              It keeps video game accounts
+              <br />
+              online in the cloud 24/7.
+            </Text>
+          </Stack>
+        </Flex>
+      </Box>
+
+      <Box py={16} px={{ base: 6, md: 0 }} bgColor='blue.50'>
+        <Flex flexDir={{ base: 'column', md: 'row' }} alignItems='center' gap={6}>
           <Stack flex={1} gap={6}>
-            <Icon as={EthereumCircle} w='50px' h='50px' color='gray.100' mx='auto' />
-            <Text fontSize='3xl' color='gray.100' textAlign='center'>
+            <Icon as={EthereumCircle} w='50px' h='50px' color='blue.700' mx='auto' />
+            <Text fontSize='3xl' color='blue.700' textAlign='center'>
               I built decentralized web applications
               <br />
               for crypto startups from 2021 to 2023
@@ -173,7 +206,7 @@ const HomePage: FC = () => {
         </Flex>
       </Box>
 
-      <Box py={16} px={{ base: 6, md: 0 }} bgColor='blue.50'>
+      <Box py={16} px={{ base: 6, md: 0 }} bgColor='green.100'>
         <Flex flexDir={{ base: 'column', md: 'row' }} alignItems='center' gap={6}>
           <Link
             flex={1}
@@ -214,7 +247,7 @@ const HomePage: FC = () => {
         </Flex>
       </Box>
 
-      <Box py={16} bgColor='green.400'>
+      <Box py={16} bgColor='blue.400'>
         <Flex
           flexDir={{ base: 'column', md: 'row' }}
           alignItems='center'
