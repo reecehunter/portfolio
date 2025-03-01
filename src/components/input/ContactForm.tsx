@@ -42,8 +42,7 @@ const ContactForm: FC<ContactFormProps> = ({ ...props }) => {
       await axios.post(`${apiEndpoint}/contact`, formData)
       modal.setModalData({
         title: '🎉 Success!',
-        description:
-          'Your message was sent. I will get back to you as soon as possible.',
+        description: 'Your message was sent. I will get back to you as soon as possible.',
         onClose: () => window.location.reload(),
       })
       modal.setOpen(true)

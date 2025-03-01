@@ -10,13 +10,7 @@ import ProjectCard from '@components/information/ProjectCard'
 import HablaLogo from '@components/icons/HablaLogo'
 import NostrCookingLogo from '@components/icons/NostrCookingLogo'
 import { Project } from '@utils/types'
-import {
-  Code,
-  CodeBracketsSquare,
-  EthereumCircle,
-  Mail,
-  ViewGrid,
-} from 'iconoir-react'
+import { Code, CodeBracketsSquare, EthereumCircle, Mail, ViewGrid } from 'iconoir-react'
 import CloudIcon from '@components/icons/Cloud'
 import StripeLogo from '@assets/stripe_logo.png'
 import SignstrLogo from '@assets/signstr_logo.png'
@@ -25,69 +19,69 @@ import SnippetManager from '@assets/snippet_manager.png'
 import ContactForm from '@components/input/ContactForm'
 import Hero from '@assets/hero.jpeg'
 
+const openSourceProjects: Project[] = [
+  {
+    logo: <HablaLogo w='50px' h='50px' fill='white' />,
+    title: 'Habla.News',
+    link: 'https://habla.news',
+    props: {
+      bgColor: 'purple.300',
+    },
+  },
+  {
+    logo: <NostrCookingLogo w='182.75625' h='50' />,
+    title: '',
+    link: 'https://zap.cooking/recent',
+    props: {
+      bgColor: 'orange.100',
+    },
+  },
+]
+
+const otherProjects: Project[] = [
+  {
+    logo: <EthereumCircle width='50px' height='50px' color='white' />,
+    title: 'ERC-20 Price Bot',
+    link: projectLinks.token_bot,
+    props: {
+      bgColor: 'orange.400',
+    },
+  },
+  {
+    logo: <Image src={SignstrLogo} w='50px' h='50px' />,
+    title: 'Signstr Extension',
+    link: projectLinks.signstr,
+    props: {
+      bgColor: '#00639a',
+    },
+  },
+  {
+    logo: <CodeBracketsSquare width='50px' height='50px' color='white' />,
+    title: 'Snippet Manager',
+    link: projectLinks.snippet_manager,
+    props: {
+      bgColor: '#2e3448',
+    },
+  },
+  {
+    logo: <CloudIcon w='50px' h='50px' fill='white' />,
+    title: 'Cloud Client',
+    link: projectLinks.cloud_client,
+    props: {
+      bgColor: 'blue.300',
+    },
+  },
+  {
+    logo: <Image src={StripeLogo} w='50px' h='50px' />,
+    title: 'Stripe Demo',
+    link: projectLinks.stripe_demo,
+    props: {
+      bgColor: '#635bff',
+    },
+  },
+]
+
 const HomePage: FC = () => {
-  const openSourceProjects: Project[] = [
-    {
-      logo: <HablaLogo w='50px' h='50px' fill='white' />,
-      title: 'Habla.News',
-      link: 'https://habla.news',
-      props: {
-        bgColor: 'purple.300',
-      },
-    },
-    {
-      logo: <NostrCookingLogo w='182.75625' h='50' />,
-      title: '',
-      link: 'https://zap.cooking/recent',
-      props: {
-        bgColor: 'orange.100',
-      },
-    },
-  ]
-
-  const otherProjects: Project[] = [
-    {
-      logo: <EthereumCircle width='50px' height='50px' color='white' />,
-      title: 'ERC-20 Price Bot',
-      link: projectLinks.token_bot,
-      props: {
-        bgColor: 'orange.400',
-      },
-    },
-    {
-      logo: <Image src={SignstrLogo} w='50px' h='50px' />,
-      title: 'Signstr Extension',
-      link: projectLinks.signstr,
-      props: {
-        bgColor: '#00639a',
-      },
-    },
-    {
-      logo: <CodeBracketsSquare width='50px' height='50px' color='white' />,
-      title: 'Snippet Manager',
-      link: projectLinks.snippet_manager,
-      props: {
-        bgColor: '#2e3448',
-      },
-    },
-    {
-      logo: <CloudIcon w='50px' h='50px' fill='white' />,
-      title: 'Cloud Client',
-      link: projectLinks.cloud_client,
-      props: {
-        bgColor: 'blue.300',
-      },
-    },
-    {
-      logo: <Image src={StripeLogo} w='50px' h='50px' />,
-      title: 'Stripe Demo',
-      link: projectLinks.stripe_demo,
-      props: {
-        bgColor: '#635bff',
-      },
-    },
-  ]
-
   return (
     <>
       <Flex
@@ -100,21 +94,9 @@ const HomePage: FC = () => {
         bgSize='cover'
         zIndex={80}
       >
-        <Box
-          pos='absolute'
-          w='100%'
-          h='100%'
-          bgColor='#1c1c1c'
-          opacity={0.95}
-          zIndex={90}
-        ></Box>
+        <Box pos='absolute' w='100%' h='100%' bgColor='#1c1c1c' opacity={0.95} zIndex={90}></Box>
         <Stack gap={6} textAlign='center' zIndex={100}>
-          <Heading
-            as='h1'
-            fontFamily='Rubik Doodle Shadow'
-            size='3xl'
-            color='gray.200'
-          >
+          <Heading as='h1' fontFamily='Rubik Doodle Shadow' size='3xl' color='gray.200'>
             Hello World!
           </Heading>
           <Text fontSize='2xl' color='gray.300'>
@@ -138,14 +120,7 @@ const HomePage: FC = () => {
 
       <Box pt={16} bgGradient='linear(to-br, #A4D5FF, green.100)'>
         <Stack gap={6} textAlign='center' mb={16}>
-          <Image
-            src={ValetFlowLogo}
-            w='60px'
-            h='60px'
-            mx='auto'
-            rounded='full'
-            shadow='lg'
-          />
+          <Image src={ValetFlowLogo} w='60px' h='60px' mx='auto' rounded='full' shadow='lg' />
           <Text fontSize='3xl' color='blue.600'>
             My latest project is{' '}
             <Link
@@ -175,31 +150,16 @@ const HomePage: FC = () => {
       </Box>
 
       <Box py={16} px={{ base: 6, md: 0 }} bgColor='blue.400'>
-        <Flex
-          flexDir={{ base: 'column', md: 'row' }}
-          alignItems='center'
-          gap={6}
-        >
+        <Flex flexDir={{ base: 'column', md: 'row' }} alignItems='center' gap={6}>
           <Stack flex={1} gap={6}>
-            <Icon
-              as={EthereumCircle}
-              w='50px'
-              h='50px'
-              color='gray.100'
-              mx='auto'
-            />
+            <Icon as={EthereumCircle} w='50px' h='50px' color='gray.100' mx='auto' />
             <Text fontSize='3xl' color='gray.100' textAlign='center'>
               I built decentralized web applications
               <br />
               for crypto startups from 2021 to 2023
             </Text>
           </Stack>
-          <Link
-            flex={1}
-            href={projectLinks.baller_bears}
-            target='_blank'
-            rel='noreferrer'
-          >
+          <Link flex={1} href={projectLinks.baller_bears} target='_blank' rel='noreferrer'>
             <Image
               src={BallerBearsWebsite}
               mx={{ base: 'auto', md: 0 }}
@@ -214,11 +174,7 @@ const HomePage: FC = () => {
       </Box>
 
       <Box py={16} px={{ base: 6, md: 0 }} bgColor='blue.50'>
-        <Flex
-          flexDir={{ base: 'column', md: 'row' }}
-          alignItems='center'
-          gap={6}
-        >
+        <Flex flexDir={{ base: 'column', md: 'row' }} alignItems='center' gap={6}>
           <Link
             flex={1}
             href={projectLinks.snippet_manager}
@@ -245,13 +201,7 @@ const HomePage: FC = () => {
             </Text>
           </Stack>
         </Flex>
-        <Flex
-          alignItems='center'
-          justifyContent='center'
-          flexWrap='wrap'
-          gap={6}
-          mt={16}
-        >
+        <Flex alignItems='center' justifyContent='center' flexWrap='wrap' gap={6} mt={16}>
           {otherProjects.map((project) => (
             <ProjectCard
               key={project.title}
